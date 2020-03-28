@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
-import EmpBody from "./EmpBody";
-import "../styles/EmpTable.css";
-import DataAreaContext from "../utils/DataAreaContext";
+import EmployeeBody from "../EmployeeBody/EmployeeBody";
+import "/EmployeeTable.css";
+import DataAreaContext from "../../utils/DataAreaContext";
 
 const EmpTable = () => {
     const context = useContext(DataAreaContext);
@@ -34,7 +34,7 @@ const EmpTable = () => {
                     </tr>
                 </thead>
 
-                <EmpBody />
+                <EmployeeBody />
             </table>
         </div>
     );

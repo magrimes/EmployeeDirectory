@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import EmpTable from "./EmpTable";
-import Nav from "./Nav";
-import API from "../utils/API";
-import "../styles/EmpArea.css";
-import DataAreaContext from "../utils/DataAreaContext";
+import EmployeeTable from "../EmployeeTable/EmployeeTable";
+import Nav from "../Nav/Nav";
+import API from "../../utils/API";
+import "EmployeeArea.css";
+import DataAreaContext from "../../utils/DataAreaContext";
 
-const EmpArea = () => {
+const EmployeeArea = () => {
     const [developerState, setDeveloperState] = useState({
         users: [],
         order: "descend",
@@ -97,7 +97,7 @@ const EmpArea = () => {
             });
         });
     }, []);
-    
+
     // Where data is being returned
     return (
         <DataAreaContext.Provider
@@ -105,10 +105,10 @@ const EmpArea = () => {
         >
             <Nav />
             <div className="data-area">
-                {developerState.filteredUsers.length > 0 ? <EmpTable /> : <div></div>}
+                {developerState.filteredUsers.length > 0 ? <EmployeeTable /> : <div></div>}
             </div>
         </DataAreaContext.Provider>
     );
 };
 
-export default EmpArea;
+export default EmployeeArea;

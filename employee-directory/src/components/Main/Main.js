@@ -1,10 +1,9 @@
 import React from "react";
-import "../styles/Main.css";
-import EmpArea from "./EmpArea";
+import EmployeeArea from "../EmployeeArea/EmployeeArea";
 
 function Main () {
     return (
-        <EmpArea />
+        <EmployeeArea />
     );
   };
 

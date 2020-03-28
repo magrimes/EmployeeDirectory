@@ -1,7 +1,7 @@
 import React from "react";
-import Main from "./components/Main";
-import Wrapper from "./components/Wrapper";
-import Header from "./components/Header";
+import Main from "./components/Main/Main";
+import Wrapper from "./components/Wrapper/Wrapper";
+import Header from "./components/Header/Header";
 
 
 function App() {
@@ -14,7 +14,5 @@ function App() {
   </div>
   );
 }
-
-
 
 export default App;
