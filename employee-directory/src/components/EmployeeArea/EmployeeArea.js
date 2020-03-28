@@ -74,13 +74,41 @@ const EmpArea = () => {
         });
     };
 
+    const handleSearchChange = event => {
+        const filter = event.target.value;
+        const filteredList = developerState.users.filter(item => {
+            let values = item.name.first.toLowerCase() + " " + item.name.last.toLowerCase();
+            
+            if (values.indexOf(filter.toLowerCase()) !== -1) {
+                return item
+            };
+        });
 
+        setDeveloperState({ ...developerState, filteredUsers: filteredList });
+    };
 
-
-
-
-
-
+    useEffect(() => {
+        API.getUsers().then(results => {
+            
+            setDeveloperState({
+                ...developerState,
+                users: results.data.results,
+                filteredUsers: results.data.results
+            });
+        });
+    }, []);
+    
+    // Where data is being returned
+    return (
+        <DataAreaContext.Provider
+            value={{ developerState, handleSearchChange, handleSort }}
+        >
+            <Nav />
+            <div className="data-area">
+                {developerState.filteredUsers.length > 0 ? <EmpTable /> : <div></div>}
+            </div>
+        </DataAreaContext.Provider>
+    );
 };
 
 export default EmpArea;
