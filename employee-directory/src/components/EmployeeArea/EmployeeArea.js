@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import EmployeeTable from "../EmployeeTable/EmployeeTable";
 import Nav from "../Nav/Nav";
 import API from "../../utils/API";
-import "EmployeeArea.css";
+import "./EmployeeArea.css";
 import DataAreaContext from "../../utils/DataAreaContext";
 
 const EmployeeArea = () => {

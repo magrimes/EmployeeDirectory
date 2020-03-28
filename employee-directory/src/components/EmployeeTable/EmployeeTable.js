@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import EmployeeBody from "../EmployeeBody/EmployeeBody";
-import "/EmployeeTable.css";
+import "./EmployeeTable.css";
 import DataAreaContext from "../../utils/DataAreaContext";
 
 const EmpTable = () => {
