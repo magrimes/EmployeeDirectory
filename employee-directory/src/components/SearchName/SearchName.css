@@ -1,0 +1,13 @@
+.searchbox button {
+    border: px solid rgb(185, 19, 19);
+}
+
+.searchbox button:hover {
+    background-color: rgb(185, 19, 19);
+    color: white;
+}
+
+.formsrch {
+    width: 500px;
+    height: 30px;
+}
